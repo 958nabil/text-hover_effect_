@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ddd;
+}
+
+section{
+    padding: 280px 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 1000px;
+    margin: auto;
+}
+
+ul{}
+ul li{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    font-size: 30px;
+    line-height: 1.5em;
+   
+}
+ul li span{
+    cursor: pointer;
+}
+ul li img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.hovering ul li{}
+.hovering ul li img{
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+    transform: scale(0);
+    transition: all .4s ease;
+}
+.hovering ul li:hover img{
+    visibility: visible;
+    transform: scale(1);
+}
+
+.hovering ul:hover li span{
+    opacity: .5;
+}
+
+.hovering ul li:hover span{
+    opacity: 1;
+}
+
